@@ -43,7 +43,7 @@ export default class LogIn extends Component
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText}>LOGIN</Text>
+          <Text style={styles.loginText} onPress={() =>navigate('Home')}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.loginText} onPress={() =>navigate('Singup')}>Signup</Text>

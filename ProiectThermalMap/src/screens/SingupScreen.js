@@ -39,7 +39,7 @@ export default class Singup extends Component {
   
           <Text 
             style={styles.loginText}
-            onPress={() => this.props.navigation.navigate('Login')}>
+            onPress={() => this.props.navigation.navigate('LogIn')}>
             Already Registered? Click here to login
           </Text>                          
         </View>
