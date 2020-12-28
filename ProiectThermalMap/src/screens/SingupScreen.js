@@ -10,7 +10,8 @@ export default class Singup extends Component {
   }
   render() {
     return (
-        <View style={styles.container}>  
+        <View style={styles.container}> 
+          <Text style={styles.logo}>Sign Up</Text> 
           <TextInput
             style={styles.inputStyle}
             placeholder="Name"
@@ -32,7 +33,7 @@ export default class Singup extends Component {
             secureTextEntry={true}
           />   
           <Button
-            color="#3740FE"
+            color='#fb5b5a'
             title="Signup"
             onPress={() => this.registerUser()}
           />
@@ -65,9 +66,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   loginText: {
-    color: '#3740FE',
+    color: 'white',
     marginTop: 25,
     textAlign: 'center'
+  },
+  logo:{
+    fontWeight:"bold",
+    fontSize:35,
+    color:"black",
+    marginBottom:40,
+    textDecorationLine: 'underline'
   },
   preloader: {
     left: 0,

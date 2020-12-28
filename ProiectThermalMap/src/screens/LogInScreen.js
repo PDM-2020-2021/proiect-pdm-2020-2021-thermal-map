@@ -21,7 +21,7 @@ export default class LogIn extends Component
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text style={styles.logo}>Thermal Map</Text>
+        <Text style={styles.logo}>Log In</Text>
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
@@ -39,9 +39,6 @@ export default class LogIn extends Component
             ref={(input) => this.password = input}>
             </TextInput>
         </View>
-        <TouchableOpacity>
-          <Text style={styles.forgot}>Forgot Password?</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.loginBtn}>
           <Text style={styles.loginText} onPress={() =>navigate('Home')}>LOGIN</Text>
         </TouchableOpacity>
@@ -56,18 +53,21 @@ export default class LogIn extends Component
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: 35,
     backgroundColor: '#0099cc',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   logo:{
     fontWeight:"bold",
-    fontSize:50,
-    color:"#fb5b5a",
-    marginBottom:40
+    fontSize:25,
+    color:"black",
+    marginBottom:40,
+    textDecorationLine: 'underline',
   },
   inputView:{
-    width:"80%",
+    width:"100%",
     backgroundColor:"#465881",
     borderRadius:25,
     height:50,
@@ -79,12 +79,8 @@ const styles = StyleSheet.create({
     height:50,
     color:"white"
   },
-  forgot:{
-    color:"white",
-    fontSize:11
-  },
   loginBtn:{
-    width:"80%",
+    width:"100%",
     backgroundColor:"#fb5b5a",
     borderRadius:25,
     height:50,
@@ -94,6 +90,7 @@ const styles = StyleSheet.create({
     marginBottom:10
   },
   loginText:{
-    color:"white"
+    color:"white",
+    alignSelf: 'center',
   }
 });
